@@ -1,9 +1,28 @@
 import Image from "next/image";
 
-const ImageSection = () => {
+interface ImageSectionProps {
+  src?: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+}
+
+const ImageSection: React.FC<ImageSectionProps> = ({
+  src = "/img/funny_developer.png",
+  alt = "Funny developer image",
+  width = 290,
+  height = 290,
+}) => {
   return (
-    <div className="flex flex-shrink-0">
-      <Image src="/img/funny_developer.png" alt="Placeholder" width={300} height={300} className="rounded mb-3" />
+    <div className="image-container">
+      <Image 
+        src={src} 
+        alt={alt} 
+        width={width} 
+        height={height} 
+        className="rounded mb-2" 
+        priority 
+      />
     </div>
   );
 };
