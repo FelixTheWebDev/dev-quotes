@@ -6,6 +6,9 @@ type QuoteSectionProps = {
 };
 
 const QuoteSection: React.FC<QuoteSectionProps> = ({ quote, fetchQuote }) => {
+
+  const isLoading = !quote; // Falls `quote` leer ist, sind wir noch am Laden.
+
   return (
     <div className="quote-container">
       {/* Button zum Abrufen eines neuen Zitats */}
@@ -17,7 +20,7 @@ const QuoteSection: React.FC<QuoteSectionProps> = ({ quote, fetchQuote }) => {
       </button>
 
       <p className="quote-text">
-        {quote}
+        {isLoading ? "Zitat wird geladen..." : quote}
       </p>
     </div>
   );

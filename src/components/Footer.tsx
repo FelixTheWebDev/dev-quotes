@@ -23,18 +23,17 @@ const funnyNames4Devs = [
 ];
 
 const Footer: React.FC<FooterProps> = ({ visitorCount = 0 }) => {
-  const [randomDevName, setRandomDevName] = useState<string>("");
-  
-
-  useEffect(() => {
-    // Setzt den zufälligen Namen erst im Browser um, da Math.Random im Client andere Werte zurückgibt wie beim SSR.
-    setRandomDevName(funnyNames4Devs[Math.floor(Math.random() * funnyNames4Devs.length)]);
-  }, [])
+  const [randomDevName] = useState<string>(
+    funnyNames4Devs[Math.floor(Math.random() * funnyNames4Devs.length)]
+  );
 
   return (
     <footer className="footer">
-      {randomDevName && visitorCount > 0 && ( // Verhindert leere Werte während der ersten SSR-Hydration
-        <><span className="span-count">{visitorCount} </span> humorvolle <span className="span-count"> {randomDevName} </span> haben diese Webseite bereits besucht! 😉</>
+      {visitorCount > 0 && (
+        <>
+          <span className="span-count">{visitorCount} </span> humorvolle
+          <span className="span-count"> {randomDevName} </span> haben diese Webseite bereits besucht! 😉
+        </>
       )}
     </footer>
   );

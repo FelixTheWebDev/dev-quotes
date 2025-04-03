@@ -42,12 +42,12 @@ body {
 
 /* Bild-Container */
 .image-container {
-  @apply flex md:px-8;
+  @apply flex w-[300px] md:w-[350px] md:px-8;
 }
 
 /* Hauptinhalt */
 .main-content { 
-  @apply w-full max-w-3xl rounded-2xl bg-[#08374d] p-4 shadow;
+  @apply w-full max-w-3xl rounded-2xl bg-[#242424] p-4 shadow;
 }
 
 /* Zitate-Sektion */
@@ -57,12 +57,12 @@ body {
 
 /* Zitate-Container */
 .quote-container {
-  @apply mx-auto flex md:w-[370px] flex-col justify-end p-4 text-center;
+  @apply mx-auto flex md:w-[370px] min-h-[300px] flex-col justify-end p-4 text-center;
 }
 
 /* Zitat-Button */
 .loadQuoteButton {
-  @apply mx-auto mt-2 cursor-pointer rounded bg-gray-800 px-10 py-2 text-lg text-white transition active:scale-95 active:bg-gray-600 hover:bg-gray-700;
+  @apply mx-auto mt-2 cursor-pointer rounded bg-gray-600 px-10 py-2 text-lg text-white transition active:scale-95 active:bg-gray-800 hover:bg-gray-700;
 }
 
 /* Zitat-Text */
@@ -72,7 +72,7 @@ body {
 
 /* Footer */
 .footer {
-  @apply w-full border border-white px-2 py-4 text-center sm:mx-2 sm:pt-4;
+  @apply w-full min-h-[64px] border border-white px-2 py-4 text-center sm:mx-2 sm:pt-4;
 }
 
 /* Besucherzähler */
