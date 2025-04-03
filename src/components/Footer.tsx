@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-// Footer component props type
 type FooterProps = {
   visitorCount: number;
 };
@@ -34,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ visitorCount = 0 }) => {
 
   return (
     <footer className="footer">
-      {randomDevName && ( // Verhindert leere Werte während der ersten SSR-Hydration
+      {randomDevName && visitorCount > 0 && ( // Verhindert leere Werte während der ersten SSR-Hydration
         <><span className="span-count">{visitorCount} </span> humorvolle <span className="span-count"> {randomDevName} </span> haben diese Webseite bereits besucht! 😉</>
       )}
     </footer>

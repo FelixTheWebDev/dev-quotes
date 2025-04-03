@@ -27,7 +27,6 @@ export default function Home() {
 
       <main className="main-content">
         <Header />
-
         <section className="quote-section">
           <ImageSection />
           <QuoteSection quote={quote} fetchQuote={handleFetchQuote} />
@@ -35,6 +34,7 @@ export default function Home() {
 
         <Footer visitorCount={visitorCount ?? 0} />
       </main>
+
     </div>
   );
 }

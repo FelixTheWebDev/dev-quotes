@@ -47,7 +47,7 @@ body {
 
 /* Hauptinhalt */
 .main-content { 
-  @apply w-full max-w-3xl rounded-2xl bg-[#222729] p-4 shadow;
+  @apply w-full max-w-3xl rounded-2xl bg-[#08374d] p-4 shadow;
 }
 
 /* Zitate-Sektion */
